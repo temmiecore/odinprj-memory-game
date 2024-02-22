@@ -10,7 +10,7 @@ header {
 header h1 { font-size: 2.2em; }
 header h2 { font-size: 1.6em; }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1230px) {
     header h1 { font-size: 1.6em; }
     header h2 { font-size: 1.3em; }
 }

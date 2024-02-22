@@ -66,16 +66,23 @@ export default function Main({ score, resetGame, highScore, setScore, setHighSco
         }
     }, [score])
 
-    return <main>
-        <div className="card-grid">
-            {
-                cards.map((item) => {
-                    return <div className="card" key={item.id} onClick={() => onCardClick(item.id)}>
-                        <img src={item.sprite} alt={item.name} />
-                        <h2>{item.name.split("-")[0]}</h2>
-                    </div>
-                })
-            }
-        </div>
-    </main>
+    return <>
+        <main>
+            <div className="card-grid">
+                {
+                    cards.map((item) => {
+                        return <div className="card" key={item.id} onClick={() => onCardClick(item.id)}>
+                            <img src={item.sprite} alt={item.name} />
+                            <h2>{item.name.split("-")[0]}</h2>
+                        </div>
+                    })
+                }
+            </div>
+        </main>
+        <footer>
+            <p>
+                Tips: <br></br>To win the game, you need to click on each card once. <br></br>If you click on something twice - you loose, and game restarts. <br></br>Cards are shuffled after each click!
+            </p>
+        </footer>
+    </>
 }
